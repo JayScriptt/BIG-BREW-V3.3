@@ -1,0 +1,125 @@
+body{
+    background: rgb(22,12,2);
+    background: linear-gradient(90deg, rgba(22,12,2,1) 0%, rgba(255,128,0,1) 100%); 
+    scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}.scroll-container::-webkit-scrollbar {
+    display: none;
+  }
+h1{
+    margin-top: 20%;
+    text-align: center;
+    font-size: 2rem;
+    text-shadow: 0px 0px 5px rgb(255, 255, 255);
+}
+#logo{
+    position: absolute;
+    top: 21%;
+    right: 1%;
+    background-image: url(logobb.png);
+    height: 60px;
+    width: 60px;
+    filter: drop-shadow(0px 0px 3px hsl(0, 0%, 0%));
+    background-size: cover;
+    opacity: 0;
+    animation: slideIn .30s ease-in-out forwards;
+}
+.menu-container{
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height:290px;
+    width: 60%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+.menu-choices{
+    border: solid black 3px;
+    border-radius: 5px;
+    width: 35%;
+    height: 60px;
+    margin-bottom: 4%;
+    cursor: pointer;
+    background-position: center;
+    background-size: cover;
+    opacity: 0;
+    animation: slideIn .30s ease-in-out forwards;
+}
+.menu-choices p {
+    position: relative;
+    background-color: black;
+    border-radius: 2px;
+    color: white;
+    text-align: center;
+    font-size: .5rem;
+    top: 68%;
+    width: 101%;
+    height:12px;
+}
+.action-btn-container{
+    width: 15%;
+    height: 50px;
+    margin-left: 80%;
+    position: absolute;
+    top:40%;
+    left: -80%;
+    position: fixed ;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.action-btn{
+    border: solid black 3px;
+    background-color: hsl(120, 93%, 41%);
+    height: 30px;
+    width: 100%;
+    margin-bottom: 30%;
+    margin-left: 15%;
+    border-radius: 10px;
+}
+.action-btn:hover {
+    background-color: hsl(120, 93%, 62%);
+    box-shadow: 0px 0px 10px hsl(120, 93%, 62%);
+    animation: .8s;
+}
+.action-btn:active{
+    background-color: hsl(231, 85%, 61%);
+    box-shadow: 0px 0px 10px hsl(231, 85%, 61%);
+    transform: scale(1.03);
+    animation: .8s;
+
+}
+.action-btn-container p {
+    font-size: .6rem;
+    font-weight: bold;
+    text-align: center;
+}
+.summary-of-orders {
+    position: absolute;
+    background-color: hsl(0, 0%, 100%);
+    position: fixed;
+    height: 230px;
+    width: 25%;
+    top: 40%;
+    right: 2%;
+    border: solid black 3px;
+    border-radius: 10px;
+    opacity: 0;
+    animation: slideIn .30s ease-in-out forwards;
+}
+.summary-of-orders p {
+    font-size: .8rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(250px);
+        opacity: 0;
+    }to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
