@@ -25,7 +25,6 @@ h1{
     animation: slideIn .30s ease-in-out forwards;
 }
 .menu-container{
-    border: solid black 3px;
     display: flex;
     flex-direction: row; 
     justify-content: space-around;
